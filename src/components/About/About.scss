@@ -1,0 +1,153 @@
+@import "../../sass/variables.scss";
+@import "../../sass/mixins.scss";
+
+.About {
+    padding: 5rem 6rem 4rem 6rem;
+    margin-bottom: 8rem;
+    font-family: 'Lato';
+
+    &__heading {
+        font-size: 4.5rem;
+        text-transform: uppercase;
+        letter-spacing: 0.3rem;
+        color: $light-black
+    }
+
+    &__about-container {
+        display: flex;
+        margin-top: 7rem;
+        align-items: center;
+        margin: 4rem 2rem;
+    }
+
+    &__img-section-container {
+        width: 40%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__img-container {
+        clip-path: circle(50% at 50% 50%);
+        height: 40rem;
+        width: 40rem;
+        // background-image: url("../../assets/Images/my_image.jpeg");
+        background-size: cover;
+        margin-left: -3rem;
+        background-repeat: round;
+    }
+
+    &__text-container {
+        width: 60%;
+        padding: 0 4rem
+    }
+
+    &__text-heading {
+        font-size: 3.25rem;
+        color: $light-black
+    }
+
+    &__text-description {
+        font-size: 2rem;
+        margin-top: 2rem;
+        word-spacing: 0.2rem;
+        line-height: 3rem;
+    }
+}
+
+
+
+@include width-1100px {
+    .About {
+
+        &__about-container {
+            margin-top: 2rem;
+        }
+
+        padding: 5rem 0;
+
+        &__heading {
+            text-align: center;
+            margin-left: -3rem;
+        }
+
+        &__about-container {
+            flex-direction: column;
+        }
+
+        &__img-container {
+            height: 40rem;
+            width: 40rem;
+        }
+
+        &__img-section-container {
+            width: auto;
+        }
+
+        &__text-contianer {
+            width: 85%;
+            text-align: center;
+            margin: 2rem auto;
+            // margin-top: 3rem;
+        }
+    }
+}
+
+@include width-650px {
+    .About {
+        &__text-container {
+            width: 95%;
+        }
+        &__text-container {
+            margin-top: 1rem;
+        }
+        &__about-container {
+            margin-top: 1rem;
+        }
+    }
+}
+
+@include width-550px {
+    .About {
+        &__about-container {
+            margin-top: 1rem;
+        }
+        &__img-container {
+            height: 30rem;
+            width: 30rem;
+        }
+        &__text-container {
+            margin-top: 1rem;
+        }
+        &__img-container {
+            margin: 0
+        }
+    }
+}
+
+@include width-450px {
+    .About {
+        &__about-container {
+            margin-top: 1rem;
+        }
+
+        &__text-description {
+            font-size: 1.25rem;
+            width: 100%;
+            padding: 0
+        }
+
+        &__text-container {
+            padding: 1rem;
+            margin-top: 1rem;
+        }
+
+        &__img-section-container {
+            display: flex;
+            justify-content: center;
+        }
+
+        
+    
+    }
+}

@@ -1,0 +1,429 @@
+@import "../../sass/variables.scss";
+@import "../../sass/mixins.scss";
+
+.Header {
+    height: 100vh;
+    overflow: hidden;;
+
+    &__container {
+      height: 90%;
+      display: flex;
+      font-family: "Lato";
+      position: relative;
+      justify-content: center;
+      flex-wrap: wrap;
+      align-content: center;
+      margin-top: 2rem;
+    }
+
+    &__img {
+      a {
+        position: absolute;
+        bottom: 10px;
+        left: 40%;
+      
+        img {
+          width: 30px;
+          animation: arrowBlink 2s infinite;
+        }
+      
+        @keyframes arrowBlink {
+          100% {
+            opacity: 0;
+          }
+        }
+      }
+      }
+
+    &__background {
+      width: 150rem;
+      position: absolute;
+      right: -40%;
+      top: -70%;
+      opacity: .4;
+    }
+
+    &__heading-container {
+      position: relative;
+      text-transform: uppercase;
+      min-width: 320px;
+    }
+
+    &__image-container {
+        height: 100%;
+        width: 55%
+    }
+
+    &__text-container {
+      flex: .5 1;
+      max-width: 80%;
+      min-width: 320px;
+      font-size: 2rem;
+      transition: background-color .5s;
+      margin-top: 3rem;
+    }
+
+
+    &__name-msg {
+        font-size: 4rem;
+        font-weight: 400;
+        color: $primary-dark;
+        text-shadow: 0.1rem 0.1rem 1rem $very-light-black;
+        letter-spacing: 0.2rem;
+    }
+
+    &__hello-msg {
+        font-size: 2.15rem;
+        margin-bottom: 0.5rem;
+        font-weight: 400;
+        color: $primary-med
+    }
+
+    &__position-msg {
+        font-size: 2rem;
+        margin-top: 1.25rem;
+        font-weight: 400;
+        color: $primary-med
+    }
+
+    &__social-media-container {
+      display: flex;
+      margin-top: 2rem;
+      margin-bottom: 5rem;
+      align-items: center;
+    }
+
+    &__project-btn {
+        margin-top: 10rem;
+        text-decoration: none;
+        margin-bottom: -5rem;
+        position: relative;
+        padding: 2rem 2.2rem;
+        transition: all .2s ease;
+
+        &:before {
+          content: "";
+          position: absolute;
+          top: 6px;
+          left: -6px;
+          display: block;
+          border-radius: 2.8rem;
+          background: rgba(65, 70, 100, 0.5);
+          width: 5.6rem;
+          height: 5.6rem;
+          transition: all .3s ease;
+        }
+
+        &:hover {
+            &:before {
+              width: 100%;
+              background: rgba($primary-light, 0.75);
+            }
+            svg {
+              transform: translateX(0)
+            }
+          }
+          &:active {
+            transform: scale(.96)
+          }
+    }
+
+    &__resume-btn {
+        margin-top: 10rem;
+        text-decoration: none;
+        margin-bottom: -5rem;
+        position: relative;
+        padding: 2rem 2.2rem;
+        transition: all .2s ease;
+
+        &:before {
+          content: "";
+          position: absolute;
+          top: 8px;
+          display: block;
+          border-radius: 2.8rem;
+          background: rgba(65, 70, 100, 0.5);
+          width: 5rem;
+          height: 5rem;
+          transition: all .3s ease;
+        }
+
+        &:hover {
+            &:before {
+              width: 100%;
+              background: rgba($primary-light, 0.75);
+            }
+            svg {
+              transform: translateX(0)
+            }
+          }
+          &:active {
+            transform: scale(.96)
+          }
+    }
+
+    &__btn-text {
+        position: relative;
+        font-size: 1.6rem;
+        line-height: 1.8rem;
+        font-weight: 900;
+        letter-spacing: .25em;
+        text-transform: uppercase;
+        vertical-align: middle;
+        color: $light-black
+    }
+
+  &__btn-svg {
+        position: relative;;
+        margin-left: 2rem;
+        margin-bottom: -0.3rem;
+        fill: none;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke: $off-black;
+        stroke-width: 2;
+        transform: translateX(-0.5rem);
+        transition: all .3s ease;
+    }
+
+ &__motion-box {
+  position: relative;
+    text-transform: uppercase;
+    min-width: 320px;
+    flex: .5 1;
+    max-width: 80%;
+    min-width: 320px;
+    font-size: 2rem;
+    transition: background-color .5s;
+    margin-top: 3rem;
+    margin-left: 3rem;
+
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-name: slide;
+  animation-timing-function: ease-in;
+  animation-direction: alternate-reverse;
+
+  animation-play-state: running;
+  animation-duration: 3s;
+  animation-direction: alternate-reverse;
+  animation-fill-mode: backwards;
+animation: slide 2s;
+-webkit-animation: slide 2s; /* Safari and Chrome */
+
+}
+
+@keyframes slide {
+0% {
+  transform: translateX(1rem);
+  margin-left: 2rem;
+}
+50% {
+  transform: translateX(10rem);
+  margin-left: 2rem;
+}
+
+55% {
+  transform: translateX(10rem);
+
+  margin-left: 2rem;
+}
+100% {
+  transform: translateX(2rem);
+
+  margin-left: 2rem;
+}
+}
+
+@-webkit-keyframes slide {
+  0% {
+    transform: translateX(1rem);
+    margin-left: 2rem;
+  }
+  50% {
+    transform: translateX(10rem);
+    margin-left: 2rem;
+  }
+  
+  55% {
+    transform: translateX(10rem);
+  
+    margin-left: 2rem;
+  }
+  100% {
+    transform: translateX(2rem);
+  
+    margin-left: 2rem;
+  }
+ }
+}
+
+
+
+@include width-1200px {
+  .Header {
+    
+    &__background {
+      width: 100rem;
+      right: -28%;
+      top: -20%;
+  }
+
+  }
+}
+
+
+@include width-1100px {
+  .Header {
+    
+    &__background {
+      width: 90rem;
+      right: -26%;
+      top: -20%;
+  }
+
+  }
+}
+
+
+@include width-1050px {
+  .Header {
+    
+    &__background {
+      width: 90rem;
+      right: -26%;
+      top: -20%;
+    }
+
+  }
+}
+
+@include width-950px {
+  .Header {
+    
+    &__background {
+      width: 85rem;
+      right: -22%;
+      top: -18%;
+  }
+
+  }
+}
+
+@include width-900px {
+  .Header {
+    &__background {
+      display: none;
+    }
+
+  }
+}
+
+
+@include width-800px {
+  
+  .Header {
+    height: 95vh;
+    &__name-msg {
+      font-size: 3rem;
+    }
+  }
+}
+
+
+@include width-450px {
+  
+  .Header {
+    height: 95vh;
+
+    &__name-msg {
+      font-size: 3rem;
+    }
+
+    &__hello-msg {
+      font-size: 1.75rem;
+    }
+
+    &__position-msg {
+        font-size: 2rem;
+    }
+
+  }
+}
+
+
+
+
+@import url('//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css');
+
+.button-wrap {
+  width: 39px;
+  height: 39px;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 100%;
+  box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.3);
+  margin-right: 3rem;
+  
+  
+  &.facebook {
+    background-color: #3B5998;
+    i.active { color: #3B5998; }
+  }
+  
+  &.linkedin {
+    background-color: #3f729b;
+    i.active { color: #3f729b; }
+  }
+  
+  &.github {
+    background-color: #026466;
+    i.active { color: #032020; }
+  }
+  
+  &.google {
+    background-color: #e52d27;
+    i.active { color: #e52d27; }
+  }
+  
+  &:hover {
+    .button-inner-wrap {
+      width: 42.5px;
+      height: 42.5px;
+      
+      i.inactive { transform: translate(100px, -50%); }
+      i.active { transform: translate(-50%, -50%); }
+    }
+  }
+}
+
+.button-inner-wrap {
+  width: 50px;
+  height: 50px;
+  border: 2px solid rgba(37, 102, 99, 56%);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  overflow: hidden;
+  background-color: #b1b0d1;
+  border-radius: 100%;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease;
+  text-decoration: none;
+  
+  i {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    
+    &.inactive {
+      color: rgba(93, 101, 109, 0.795);
+      transform: translate(-50%, -50%);
+    }
+    
+    &.active { transform: translate(-150px, -50%); }
+  }
+}

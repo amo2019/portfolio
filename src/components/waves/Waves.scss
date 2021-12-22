@@ -1,0 +1,74 @@
+.waves {
+  position: relative;
+
+.container {
+    width: 300px;
+    opacity: .2;
+    z-index: -8;
+
+.wave {
+  $speed: 0.9s;
+  position: absolute;
+  width: 100%; height: 100%;
+  display: flex;
+  justify-content: space-around;
+  background-color: #e1c22b24;
+  align-items: center;
+
+  &:nth-child(1) .bar {
+    width: 2px; height: 420px;
+
+  }
+
+  &:nth-child(n+2) .bar {
+    animation:
+      barHeight $speed infinite ease-in-out alternate,
+      barSkew $speed infinite ease-in-out alternate;
+  }
+  &:nth-child(n+1) .bar {
+    animation:
+      barHeight $speed infinite ease-in-out alternate,
+      barSkew $speed infinite ease-in-out alternate;
+  }
+
+  @for $i from 0 to 24 {
+    .bar:nth-child(#{$i + 1}) {
+      animation-delay: calc(var(--f) * #{$i}), calc(var(--f) * #{$i} - #{$speed / 2});
+    }
+  }
+
+  &[data-level="1"] .bar {
+    width: 11px;
+    background-color: #0d2e56;
+    --f: #{$speed / -16};
+    --h: 60px;
+
+  }
+  &[data-level="2"] .bar {
+    width: 8px;
+    background-color: rgb(124, 150, 235);
+    --f: #{$speed / -8};
+    --h: 120px;
+  }
+  &[data-level="3"] .bar {
+    width: 5px;
+    background-color: #121212;
+    --f: -0.075s;
+    --h: 40px;
+    opacity: .8;
+  }
+}
+
+@keyframes barHeight {
+  from { height: var(--h); }
+  to { height: calc(var(--h) + 100px); }
+}
+
+@keyframes barSkew {
+  from { transform: skewY(30deg); }
+  to { transform: skewY(-30deg); }
+}
+
+}
+
+}

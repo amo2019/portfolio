@@ -1,0 +1,165 @@
+@import "../../sass/variables.scss";
+
+.contact-main {
+  padding: 2rem 2rem;
+}
+
+.contact-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  grid-auto-flow: row;
+  margin: 2rem 4rem;
+  font-family: 'Lato';
+  font-weight: 600;
+  align-items: spa;
+  justify-items: left;
+  letter-spacing: .5px;
+  font-size: 1.75rem;
+  margin-top: 2rem;
+  word-spacing: 0.2rem;
+  line-height: 3rem;
+  }
+
+  .flex-contact {
+    display: flex;
+    flex-wrap: wrap;
+    flex-flow: column;
+    justify-content: space-evenly;
+    justify-items: center;
+    padding: 1rem;
+   
+  }
+
+  .contact-grid i {
+    font-size: 3.5rem;
+    padding-right: 1rem;
+    padding-bottom: 2rem;
+  }
+
+.mdl-grid {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto 0 auto;
+    align-items: stretch;
+  }
+  
+  .mdl-cell-1 {
+    grid-column: span 5;
+    display: flex;
+    flex-wrap: wrap;
+    flex-flow: column;
+    justify-content: space-evenly;
+    justify-items: center;
+    padding: 1rem;
+ 
+    
+  }
+
+  .mdl-cell-1 img {
+    order: -1;
+    align-self: center;
+    margin-bottom: 0.5rem;
+    max-width: 60%;
+    height: auto;
+    vertical-align: middle;
+    color: #000;
+    height: 200px;
+    opacity: 0.9;
+    margin: auto;
+
+  }
+
+  .mdl-cell-1 h2 {
+    align-self: center;
+    /* margin-bottom: 0.5rem; */
+    max-width: 60%;
+    padding-top: 1.2rem;
+    height: auto;
+    vertical-align: middle;
+    color: #3f5ec7;
+    margin: auto;
+  }
+  
+  .mdl-cell-2 {
+    grid-column: span 3;
+    display: flex;
+    flex-wrap: wrap;
+    flex-flow: column;
+    justify-content: flex-end;
+    justify-items: center;
+    padding: 1rem;
+    margin-left: 1rem;
+    color: #282525;
+  }
+  
+  .contact-list i {
+    font-family: "Anton", sans-serif;
+    font-size: 66px;
+    padding-right: 3rem;
+  }
+
+  .underline_contact {
+    margin: 0 0 15px;
+    border-bottom-width: 4px;
+    border-bottom-color: #3f5ec7;
+    border-bottom-style: groove;
+    margin-top: 4px;
+  }
+
+  .email {
+    font-size: 1.7rem;
+    display: inline-block;
+    font-family: 'Lato';
+  }
+
+  .fa {
+    font-size: xx-large;
+  }
+
+  .description {
+    color: rgb(40, 38, 38);
+    max-width: 70ch;
+    margin: auto;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    text-align: left;
+  }
+
+  .about-image {
+    border-radius: 60%;
+  }
+
+  .contact-link-btn {
+    margin-top: 10rem;
+    text-decoration: none;
+    margin-bottom: -5rem;
+    position: relative;
+    padding: 1.2rem 2rem;
+    transition: all .2s ease;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 1px;
+      right: 6px;
+      display: block;
+      border-radius: 2.8rem;
+      background: rgba(65, 70, 100, 0.5);
+      width: 3.6rem;
+      height: 3.6rem;
+      transition: all .3s ease;
+    }
+
+    &:hover {
+        &:before {
+          width: 100%;
+          background: rgba($primary-light, 0.75);
+        }
+        svg {
+          transform: translateX(0)
+        }
+      }
+      &:active {
+        transform: scale(.96)
+      }
+}

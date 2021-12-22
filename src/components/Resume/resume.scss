@@ -1,0 +1,123 @@
+@import "../../sass/variables.scss";
+
+#main {
+  padding: 1rem 2rem 2rem 2rem;
+  min-height: calc(100vh - 120px);
+  background: white;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.8rem;
+  font-family: 'Lato';
+}
+
+.resume-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    grid-auto-flow: row;
+    margin: .6rem 0
+  }
+
+  .flex-resume {
+    display: flex;
+    flex-wrap: wrap;
+    flex-flow: column;
+    justify-content: space-evenly;
+    justify-items: center;
+    padding: 1rem;
+    
+  }
+
+  .flex-div{
+  }
+
+  .link-btn {
+    margin-top: 10rem;
+    text-decoration: none;
+    margin-bottom: -5rem;
+    position: relative;
+    padding: 2rem 2rem;
+    transition: all .2s ease;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 14px;
+      right: 6px;
+      display: block;
+      border-radius: 2.8rem;
+      background: rgba(65, 70, 100, 0.5);
+      width: 3.6rem;
+      height: 3.6rem;
+      transition: all .3s ease;
+    }
+
+    &:hover {
+        &:before {
+          width: 100%;
+          background: rgba($primary-light, 0.75);
+        }
+        svg {
+          transform: translateX(0)
+        }
+      }
+      &:active {
+        transform: scale(.96)
+      }
+}
+
+.link-btn-text {
+  position: relative;
+  font-size: 1.6rem;
+  line-height: 1.8rem;
+  font-weight: 900;
+  letter-spacing: .25em;
+  text-transform: uppercase;
+  vertical-align: middle;
+  color: $light-black
+}
+
+hr {
+  border-top: 3px solid #3f5ec7;
+}
+
+.h2-mt {
+  margin-top: 1rem;
+}
+
+.skills-div {
+ margin-left: 1rem; 
+ margin-top:0rem;
+}
+
+.p-tag {
+  font-size: 1.4rem;
+}
+  .grid-resume  {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 1rem;
+    margin: 2rem 0;
+  }
+
+ .cell-8 {
+    grid-column: span 6;
+    display: flex;
+    flex-wrap: wrap;
+    flex-flow: column;
+    justify-content: space-evenly;
+    justify-items: center;
+    padding: 1rem;
+    color: rgb(0, 0, 0);
+    
+  }
+  
+  .cell-4 {
+    grid-column: span 2;
+    display: flex;
+    flex-wrap: wrap;
+    flex-flow: column;
+    justify-content: space-evenly;
+    justify-items: center;
+    padding: 0 1rem;
+    color: rgb(2, 10, 0);
+  }

@@ -1,0 +1,99 @@
+@import "../../sass/variables.scss";
+@import "../../sass/mixins.scss";
+
+.Nav {
+    height: 7.5vh;
+    position: fixed;
+    width: 100vw;
+    font-family: "Lato";
+    z-index: 5;
+    transition: 1s background-color ease-in;
+    
+
+    &--active {
+        background-color: $navy-blue;
+    }
+
+    &__container {
+        height: 100%;
+        transition: 1s border-bottom ease-in;
+        border-bottom: 0.2rem solid transparent;
+
+        &--active {
+            border-bottom: 0.2rem solid $primary-dark;
+        }
+    }
+
+    &__list {
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    &__list-item {
+        list-style: none;
+        padding: 0 4rem;
+        z-index: 99;
+
+        &--home {
+            margin-right: auto;
+            margin-left: 1rem;
+            list-style: none;
+        }
+
+        &--burger {
+            cursor: pointer;
+            display: none;
+        }
+    }
+
+
+    &__link {
+        text-decoration: none;
+        color: $off-black;
+        font-size: 2rem;
+        font-weight: 500;
+        letter-spacing: 0.25rem;
+        transition: color 1s ease in;
+        font-weight: 700;
+
+        &--active {
+            color: $off-white
+        }
+
+        &:hover {
+            color: $dark-grey;
+            font-size: 1.995rem;
+        }
+    }
+}
+
+
+@include width-900px {
+    .Nav {
+
+        &--active {
+            background-color: transparent;
+        }
+
+        &__container {
+            &--active {
+                border-bottom: 0.1rem solid transparent;
+            }
+        }
+
+
+        &__list-item--home {
+            list-style: none;
+          }
+
+        &__list-item {
+            display: none;
+
+            &--burger {
+                display: block;
+                margin-left: auto;
+            }
+        }
+    }
+}

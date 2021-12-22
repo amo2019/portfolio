@@ -1,0 +1,52 @@
+@import "../../sass/variables.scss";
+
+.SideNav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 60vw;
+    background-color: #1b242f;
+    height: 100%;
+    padding: 4rem;
+    opacity: .99;
+    z-index: 5;
+    font-family: "Lato";
+   
+
+    &__list {
+        list-style: none;
+        text-align: center;
+        margin-top: 4rem;
+    }
+
+    &__list-item {
+        margin-bottom: 6rem;
+    }
+
+    &__link {
+        font-size: 2.75rem;
+        text-decoration: none;
+        color: $off-white;
+        border-bottom: 0.2rem solid transparent;
+        transition: 0 0.1s ease border;
+    }
+
+    &__link:hover {
+        color: $dark-grey;
+        font-size: 2.73rem;
+    }
+
+    &__close-btn {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        position: absolute;
+        right: 9%;
+        top: 3%;
+
+        &:focus {
+            outline: none
+        }
+    }
+
+}

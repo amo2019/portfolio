@@ -1,0 +1,31 @@
+@import "../../sass/variables.scss";
+@import "../../sass/mixins.scss";
+
+.Projects {
+    padding: 3rem 6rem;
+    font-family: 'Lato';
+
+    &__heading {
+        font-size: 4.5rem;
+        text-transform: uppercase;
+        letter-spacing: 0.3rem;
+        color: $light-black
+    }
+
+    &__projects-container {
+        margin-top: 2rem;
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+        align-items: end;    }
+}
+
+@include width-1100px {
+    .Projects {
+        padding: 1rem 0;
+
+        &__heading {
+            text-align: center;
+        }
+    }
+}
